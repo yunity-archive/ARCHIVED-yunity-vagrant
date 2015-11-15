@@ -6,26 +6,13 @@ This allows you to either:
 * run a complete yunity deployment inside a vm
 * run a partial yunity deployment, so you can work on 1 or more of the repos
 
-There are 4 yunity repos:
-* yunity-core: a django webapp
-* yunity-webapp-mobile: an angularjs mobile web frontend
-* yunity-webapp: an angularjs web frontend
-* yunity-webapp-common: common functionality between the two angularjs apps
-
-And there are a handful of services running:
-* postgresql
-* redis
-* elasticsearch (in the future)
-
-If you want to run all this on your local machine, you might want to use the [yunity setup](https://github.com/yunity/yunity-setup).
+If you just want to set things up directly on your local machine, check out [yunity setup](https://github.com/yunity/yunity-setup). This repo will do the setup inside a vagrant vm.
 
 ## Prerequisites
 
-You need vagrant and virtualbox installed, and you should get hold of yunity.box from somewhere (with `vagrant box add yunity <someurl or path>`)
+vagrant (version 1.7 or higher) and virtualbox (version 5 or higher) are required.
 
-You can get them how you want :)
-
-#### From website
+Either get them using your package manager or download them from:
 
 * [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
@@ -52,8 +39,9 @@ If you want to load the module on boot, edit:
 
 (the kernel modules needed should be `vboxnetadp vboxnetflt vboxpci vboxdrv`)
 
-## Run everything
+## Quick start
 
+This will run everything.
 
 Get the box/image first! (you might be able to find a local copy that will download quicker...)
 
@@ -71,11 +59,13 @@ vagrant up
 
 You can then visit [localhost:8091](http:///localhost:8091) for the mobile web app and [localhost:8090](http://localhost:8090) for the web app.
 
-## Work on the mobile webapp
+## Work on the frontend
 
-To work on just the mobile webapp, you have the code on your host machine, and they get mounted into the vm.
+If you want to work on the frontend, you can clone the repos (in the same directory as the vagrant setup).
 
 ```
+# you can clone any or all of these as you wish
+git clone git@github.com:yunity/yunity-webapp.git
 git clone git@github.com:yunity/yunity-webapp-common.git
 git clone git@github.com:yunity/yunity-webapp-mobile.git
 ```
