@@ -1,0 +1,3 @@
+# ignore all the yunity repos
+yunity-*
+.vagrant
