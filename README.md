@@ -49,6 +49,11 @@ Get the box/image first! (you might be able to find a local copy that will downl
 vagrant box add yunity http://p12607.ngcobalt20.manitu.net/download.php?file=yunity.box
 ```
 
+If you are at a wuppdays event you can download it from our local server:
+```
+vagrant box add yunity http://loewenbraeu/upload/yunity.box
+```
+
 Then:
 
 ```
