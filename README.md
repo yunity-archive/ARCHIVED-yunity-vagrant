@@ -17,9 +17,44 @@ And there are a handful of services running:
 * redis
 * elasticsearch (in the future)
 
+## Prerequiisties
+
+You need vagrant and virtualbox installed.
+
+You can get them how you want :)
+
+#### From website
+
+* [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+* [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
+
+#### archlinux
+
+This will install vagrant and virtualbox and configure the kernel module.
+
+```
+sudo pacman -S vagrant virtualbox virtualbox-host-dkms linux-headers
+sudo dkms install vboxhost/5.0.8 # this version could change of course...
+sudo /sbin/rcvboxdrv
+```
+
+Optionally, if you want to have dkms rebuild on kernel upgrade, you must enable it:
+```
+systemctl enable dkms.service
+```
+
+If you want to load the module on boot, edit:
+```
+/etc/modules-load.d/virtualbox.conf
+```
+
+(the kernel modules needed should be `vboxnetadp vboxnetflt vboxpci vboxdrv`)
+
 ## Run everything
 
 ```
+git clone git@github.com:yunity/yunity-vagrant.git yunity
+cd yunity
 vagrant up
 ```
 
