@@ -21,7 +21,7 @@ If you want to run all this on your local machine, you might want to use the [yu
 
 ## Prerequisites
 
-You need vagrant and virtualbox installed.
+You need vagrant and virtualbox installed, and you should get hold of yunity.box from somewhere.
 
 You can get them how you want :)
 
