@@ -2,7 +2,7 @@ apt-get update
 
 apt-get -y upgrade
 
-apt-get -y install git redis-server elasticsearch python3 python3-dev python-virtualenv postgresql postgresql-server-dev-9.4 gcc libffi-dev libncurses5-dev
+apt-get -y install git redis-server elasticsearch python3 python3-dev python-virtualenv postgresql postgresql-server-dev-9.4 gcc build-essential g++ libffi-dev libncurses5-dev
 
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
 apt-get install -y nodejs
