@@ -17,7 +17,7 @@ And there are a handful of services running:
 * redis
 * elasticsearch (in the future)
 
-## Prerequiisties
+## Prerequisites
 
 You need vagrant and virtualbox installed.
 
