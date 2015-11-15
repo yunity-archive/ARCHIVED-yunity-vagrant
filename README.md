@@ -17,6 +17,8 @@ And there are a handful of services running:
 * redis
 * elasticsearch (in the future)
 
+If you want to run all this on your local machine, you might want to use the [yunity setup](https://github.com/yunity/yunity-setup).
+
 ## Prerequisites
 
 You need vagrant and virtualbox installed.
