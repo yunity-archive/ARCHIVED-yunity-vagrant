@@ -54,6 +54,15 @@ If you want to load the module on boot, edit:
 
 ## Run everything
 
+
+Get the box/image first! (you might be able to find a local copy that will download quicker...)
+
+```
+vagrant box add yunity http://p12607.ngcobalt20.manitu.net/download.php?file=yunity.box
+```
+
+Then:
+
 ```
 git clone git@github.com:yunity/yunity-vagrant.git yunity
 cd yunity
