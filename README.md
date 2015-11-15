@@ -76,6 +76,4 @@ Then you must reload and reprovision the machine:
 vagrant reload --provision
 ```
 
-### How does it work?
-
-The `Vagrantfile` checks to see if the directories exist and if so, mounts them into the app. The `bootstrap.sh` script runs the [`Makefile`](https://github.com/yunity/yunity-setup/blob/master/Makefile) from the yunity-setup project, which will configure it correctly.
+It will then mount those directories inside the vm to let you work on them from the host machine.
