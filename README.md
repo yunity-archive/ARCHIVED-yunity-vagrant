@@ -17,7 +17,16 @@ Either get them using your package manager or download them from:
 * [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 * [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
 
-#### archlinux
+### Ubuntu/Debian
+
+The packaged version of vagrant is probably too old, you can install a good version from the vagrant site:
+
+```
+wget https://releases.hashicorp.com/vagrant/1.7.4/vagrant_1.7.4_x86_64.deb
+sudo dpkg -i vagrant_1.7.4_x86_64.deb
+```
+
+### archlinux
 
 This will install vagrant and virtualbox and configure the kernel module.
 
