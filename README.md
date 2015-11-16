@@ -59,10 +59,12 @@ Then:
 ```
 git clone git@github.com:yunity/yunity-vagrant.git yunity
 cd yunity
-vagrant up
+vagrant up --provision
 ```
 
 You can then visit [localhost:8091](http:///localhost:8091) for the mobile web app and [localhost:8090](http://localhost:8090) for the web app.
+
+For now you always need to include the `--provision` option (`vagrant up --provision`) as this not only sets the box up, but starts the apps running (this will not always be true).
 
 ## Work on the frontend
 
@@ -82,3 +84,11 @@ vagrant reload --provision
 ```
 
 It will then mount those directories inside the vm to let you work on them from the host machine.
+
+## Updating
+
+To update the setup, have your vagrant up and running then:
+
+```
+make update
+```
