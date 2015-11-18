@@ -12,7 +12,8 @@ update-backend:
 
 update-vm:
 	$(call run,make update)
-	$(call run,pm2 restart all)
+	$(call run,pm2 kill)
+	$(call run,pm2 start pm2.json)
 
 update-backend-vm:
 	$(call run,make update-backend)
