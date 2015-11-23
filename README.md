@@ -10,7 +10,16 @@ You only need to use this repo if you are wanting to build `yunity-backend.box`.
 git clone git@github.com:yunity/yunity-vagrant.git
 cd yunity-vagrant
 vagrant up
-vagrant package --output yunity-backend.box
+vagrant ssh -- ./update
+# optionally do some cleanup (zero out disk, `apt-get clean`, ...)
+vagrant package --output yunity-backend-1.0.box
+```
+
+To update the packages inside the vm image you can run one of:
+
+```
+vagrant reload --provision # if it's already running
+vagrant up --provision     # if it's not running
 ```
 
 ## Prerequisites
