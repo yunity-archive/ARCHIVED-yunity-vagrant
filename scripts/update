@@ -1,0 +1,15 @@
+#!/bin/bash
+
+Makefile_url="https://raw.githubusercontent.com/yunity/yunity-vagrant/master/scripts/Makefile"
+Makefile_content=`curl --fail $Makefile_url 2>/dev/null`
+
+if [ 0 -eq $? ]; then
+  echo "$Makefile_content" > Makefile
+  echo "Updated Makefile from $Makefile_url"
+else
+  echo "Could not update Makefile from $Makefile_url"
+fi
+
+sudo cp Makefile yunity/
+cd yunity
+sudo make update

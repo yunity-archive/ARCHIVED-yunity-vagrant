@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd yunity
+sudo make trash-db
