@@ -134,7 +134,6 @@ setup-postgres:
 	@echo "$$POSTGRES_CONF" | sudo tee /etc/postgresql/9.4/main/postgresql.conf >/dev/null
 	@echo "$$POSTGRES_HBA" | sudo tee /etc/postgresql/9.4/main/pg_hba.conf >/dev/null
 	@sudo systemctl restart postgresql
-	
 
 install-sockets: | setup-sockets
 	@echo && echo "# $@" && echo
