@@ -1,0 +1,19 @@
+#!/bin/bash
+
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
+
+apt-get -y upgrade
+
+apt-get -y install git redis-server elasticsearch python3 python3-dev python-virtualenv postgresql postgresql-server-dev-9.4 gcc build-essential g++ libffi-dev libncurses5-dev vim nodejs libpam-systemd
+
+[[ ! -f /usr/local/bin/elasticsearch ]] && ln -s /usr/share/elasticsearch/bin/elasticsearch /usr/local/bin/elasticsearch
+
+[[ ! -f /usr/bin/node ]] && ln -s /usr/bin/nodejs /usr/bin/node
+
+# force https: protocol for all git commands
+git config --global url."https://github.com/".insteadOf git@github.com:
+
+mkdir -p yunity
+
+cp Makefile yunity/Makefile
+cd yunity && make install
