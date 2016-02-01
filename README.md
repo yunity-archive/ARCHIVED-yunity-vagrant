@@ -4,6 +4,8 @@ Builds a vagrant box that you can use to run the yunity backend apps.
 
 You only need to use this repo if you are wanting to build `yunity-backend.box`.
 
+If you are trying to setup a yunity development environment you want [yunity-setup](https://github.com/yunity/yunity-setup).
+
 ## Building
 
 ```
